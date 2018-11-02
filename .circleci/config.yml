@@ -2,14 +2,14 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-version: 2
+version: 1
 jobs:
   build:
     working_directory: ~/hello-world-ci
 
     docker:
       # specify the version you desire here
-      - image: circleci/node:6.10
+      - image: circleci/node:8.10
 
     steps:
       - checkout
@@ -35,7 +35,7 @@ jobs:
       # deploy app            
       - run:
           name: Deploy application 
-          command: sls deploy -v
+          command: sls deploy
 
       - save_cache:
           paths:
