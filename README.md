@@ -10,4 +10,4 @@ A serverless NodeJS app using CI with CircleCI. It is a companion project for th
 
 ## Run Tests
 
-``` npm test --coverage ```
+``` npm test ```
